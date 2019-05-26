@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mmotov/Desktop/abstractVM/include/IOperand.hpp">
-			<Option target="abstractVM"/>
-		</Unit>
-		<Unit filename="/Users/mmotov/Desktop/abstractVM/include/Parser.hpp">
-			<Option target="abstractVM"/>
-		</Unit>
 		<Unit filename="/Users/mmotov/Desktop/abstractVM/src/Parser.cpp">
 			<Option target="abstractVM"/>
 		</Unit>

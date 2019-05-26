@@ -6,7 +6,5 @@ set(CMAKE_CXX_STANDARD 98)
 include_directories(include)
 
 add_executable(abstractVM
-        include/IOperand.hpp
-        include/Parser.hpp
         src/main.cpp
         src/Parser.cpp)
