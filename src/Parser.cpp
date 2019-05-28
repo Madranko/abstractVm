@@ -18,6 +18,28 @@ Parser &Parser::operator=(const Parser &rhs) {
 }
 
 /**
+ * Search for ';' symbol. Returns substring before ';'
+ * @param string line to search.
+ * @return string substring before ';'
+ */
+std::string   Parser::_clearCommentFromLine(const std::string &line){
+
+	int pos = line.find(';');
+	std::string clearLine = line.substr (0, pos);
+	return clearLine;
+}
+
+/**
+ * Check if line is ';;'.
+ * @param line string to search.
+ * @return bool true if regex match, false if does not
+ */
+bool   Parser::_endOfInput(const std::string & line) {
+	std::regex endRegex2("^;;$");
+	return regex_match(line, endRegex2);
+}
+
+/**
  * Read user input until exit or ';;'.
  * @return void.
  */
@@ -39,28 +61,6 @@ void   Parser::readInput(){
 }
 
 /**
- * Check if line is ';;'.
- * @param line string to search.
- * @return bool true if regex match, false if does not
- */
-bool   Parser::_endOfInput(const std::string & line) {
-	std::regex endRegex2("^;;$");
-	return regex_match(line, endRegex2);
-}
-
-/**
- * Search for ';' symbol. Returns substring before ';'
- * @param string line to search.
- * @return string substring before ';'
- */
-std::string   Parser::_clearCommentFromLine(const std::string &line){
-
-	int pos = line.find(';');
-	std::string clearLine = line.substr (0, pos);
-    return clearLine;
-}
-
-/**
  * Replace all unnecessary symbols
  * @param string line to clear.
  * @return string clear line
@@ -77,15 +77,18 @@ std::string   Parser::replaceSpacings(std::string &line){
 
 
 std::string   Parser::_parseLine(std::string &line) {
-//	this->_parsedLine = new struct parsedLine;
+	struct parsedLine *parsedLine = new struct parsedLine;
 	line = this->replaceSpacings(line);
 	if (this->_isInstructionWithoutValue(line)) {
-		std::cout << "Instr without value" << std::endl;
-//		this->_parsedLine->instruction = line;
-		//todo: struct->instruction = line;
+		parsedLine->instruction = line;
 	} else if (this->_isInstructionWithValue(line)) {
-		std::cout << "Instr has value" << std::endl;
-		this->_parseInstruction(line, false);
+		int posSpace = line.find(' ');
+		int posOpenParenthesis = line.find('(');
+		int posCloseParenthesis = line.find(')');
+		parsedLine->instruction = line.substr (0, posSpace);
+		parsedLine->type = line.substr(posSpace + 1, posOpenParenthesis - posSpace - 1);
+		std::string stingValue = line.substr(posOpenParenthesis + 1, posCloseParenthesis - posOpenParenthesis - 1);
+		parsedLine->stringValue = this->replaceSpacings(stingValue);
 	} else if (!line.empty()) {
 		std::cout << "Error" << std::endl;
 	} else {

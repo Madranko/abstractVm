@@ -4,17 +4,17 @@
 #include <string>
 
 enum eOperandType {
-	_int8 = 1,
-	_int16 = 2,
-	_int32 = 3,
-	_float = 4,
-	_double = 5
+	INT8,
+	INT16,
+	INT32,
+	FLOAT,
+	DOUBLE
 };
 
 struct	parsedLine {
 	std::string	instruction;
 	std::string	type;
-	std::string	value;
+	std::string	stringValue;
 	std::string	error;
 };
 
