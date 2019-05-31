@@ -1,5 +1,5 @@
 NAME = avm
-CC = clang++
+CC = clang++ -std=c++11
 FLAGS = #-Wall -Wextra -Werror
 
 SRC_PATH = ./src/

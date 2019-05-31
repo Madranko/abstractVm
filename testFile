@@ -1,0 +1,5 @@
+push int32(234)
+push int32(22)
+dump
+exit
+;;

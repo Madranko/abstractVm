@@ -4,14 +4,16 @@
 #include <string>
 #include <cstdio>
 #include <iostream>
+#include <fstream>
 #include <regex>
 #include <algorithm>
 #include "eOperandType.hpp"
+#include <list>
 
 class Parser {
 
 public:
-	Parser();
+	Parser(int argc, char **argv);
 
 	Parser(const Parser &copy);
 
@@ -20,17 +22,20 @@ public:
 	Parser &operator=(const Parser &rhs);
 
 	void		readInput();
+    void		readFile(const std::string & filename);
 	std::string	replaceSpacings(std::string & line);
+    std::list<struct sParsedLine>&  getListOfParsedLines();
+    std::list<std::string>&         getFilenames();
 
 private:
-	bool				_endOfInput(const std::string & line);
+	bool				_endOfInput(std::string & line);
 	std::string			_clearCommentFromLine(const std::string & line);
-	std::string			_parseLine(std::string & line);
-	std::string			_parseInstruction(const std::string & line, const bool & hasValue);
+    sParsedLine*		_parseLine(std::string & line);
 	bool				_isInstructionWithoutValue(const std::string & line);
 	bool				_isInstructionWithValue(const std::string & line);
-	bool				_error;
-//	struct parsedLine	*_parsedLine;
+
+    std::list<struct sParsedLine>   _listOfParsedLines;
+    std::list<std::string>          _filenames;
 
 };
 

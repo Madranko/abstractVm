@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mmotov/Desktop/abstractVM
+/private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mmotov/PhpstormProjects/avm
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/mmotov/Desktop/abstractVM/cmake-build-debug
+-- Build files have been written to: /Users/mmotov/PhpstormProjects/avm/cmake-build-debug

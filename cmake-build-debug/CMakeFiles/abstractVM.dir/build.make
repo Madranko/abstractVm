@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mmotov/Desktop/abstractVM
+CMAKE_SOURCE_DIR = /Users/mmotov/PhpstormProjects/avm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mmotov/Desktop/abstractVM/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mmotov/PhpstormProjects/avm/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/abstractVM.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/abstractVM.dir/flags.make
 
 CMakeFiles/abstractVM.dir/src/main.cpp.o: CMakeFiles/abstractVM.dir/flags.make
 CMakeFiles/abstractVM.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/abstractVM.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/main.cpp.o -c /Users/mmotov/Desktop/abstractVM/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/abstractVM.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/main.cpp.o -c /Users/mmotov/PhpstormProjects/avm/src/main.cpp
 
 CMakeFiles/abstractVM.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/abstractVM.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mmotov/Desktop/abstractVM/src/main.cpp > CMakeFiles/abstractVM.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mmotov/PhpstormProjects/avm/src/main.cpp > CMakeFiles/abstractVM.dir/src/main.cpp.i
 
 CMakeFiles/abstractVM.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/abstractVM.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mmotov/Desktop/abstractVM/src/main.cpp -o CMakeFiles/abstractVM.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mmotov/PhpstormProjects/avm/src/main.cpp -o CMakeFiles/abstractVM.dir/src/main.cpp.s
 
 CMakeFiles/abstractVM.dir/src/Parser.cpp.o: CMakeFiles/abstractVM.dir/flags.make
 CMakeFiles/abstractVM.dir/src/Parser.cpp.o: ../src/Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/Parser.cpp.o -c /Users/mmotov/Desktop/abstractVM/src/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/Parser.cpp.o -c /Users/mmotov/PhpstormProjects/avm/src/Parser.cpp
 
 CMakeFiles/abstractVM.dir/src/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/abstractVM.dir/src/Parser.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mmotov/Desktop/abstractVM/src/Parser.cpp > CMakeFiles/abstractVM.dir/src/Parser.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mmotov/PhpstormProjects/avm/src/Parser.cpp > CMakeFiles/abstractVM.dir/src/Parser.cpp.i
 
 CMakeFiles/abstractVM.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/abstractVM.dir/src/Parser.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mmotov/Desktop/abstractVM/src/Parser.cpp -o CMakeFiles/abstractVM.dir/src/Parser.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mmotov/PhpstormProjects/avm/src/Parser.cpp -o CMakeFiles/abstractVM.dir/src/Parser.cpp.s
 
 # Object files for target abstractVM
 abstractVM_OBJECTS = \
@@ -95,7 +95,7 @@ abstractVM: CMakeFiles/abstractVM.dir/src/main.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/src/Parser.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/build.make
 abstractVM: CMakeFiles/abstractVM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable abstractVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable abstractVM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/abstractVM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/abstractVM.dir/clean:
 .PHONY : CMakeFiles/abstractVM.dir/clean
 
 CMakeFiles/abstractVM.dir/depend:
-	cd /Users/mmotov/Desktop/abstractVM/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mmotov/Desktop/abstractVM /Users/mmotov/Desktop/abstractVM /Users/mmotov/Desktop/abstractVM/cmake-build-debug /Users/mmotov/Desktop/abstractVM/cmake-build-debug /Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles/abstractVM.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/mmotov/PhpstormProjects/avm/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mmotov/PhpstormProjects/avm /Users/mmotov/PhpstormProjects/avm /Users/mmotov/PhpstormProjects/avm/cmake-build-debug /Users/mmotov/PhpstormProjects/avm/cmake-build-debug /Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/abstractVM.dir/depend
 

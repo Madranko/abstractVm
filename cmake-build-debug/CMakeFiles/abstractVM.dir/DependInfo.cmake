@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/mmotov/Desktop/abstractVM/src/Parser.cpp" "/Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
-  "/Users/mmotov/Desktop/abstractVM/src/main.cpp" "/Users/mmotov/Desktop/abstractVM/cmake-build-debug/CMakeFiles/abstractVM.dir/src/main.cpp.o"
+  "/Users/mmotov/PhpstormProjects/avm/src/Parser.cpp" "/Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
+  "/Users/mmotov/PhpstormProjects/avm/src/main.cpp" "/Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
