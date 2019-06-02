@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mmotov/PhpstormProjects/avm/include 
+CXX_INCLUDES = -I/Users/maksym/projects/avm/include 
 

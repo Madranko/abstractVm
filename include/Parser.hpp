@@ -7,8 +7,9 @@
 #include <fstream>
 #include <regex>
 #include <algorithm>
-#include "eOperandType.hpp"
 #include <list>
+#include "eOperandType.hpp"
+#include "AvmParseException.hpp"
 
 class Parser {
 
@@ -21,21 +22,24 @@ public:
 
 	Parser &operator=(const Parser &rhs);
 
+	void        parse();
 	void		readInput();
     void		readFile(const std::string & filename);
+    bool        validate();
 	std::string	replaceSpacings(std::string & line);
-    std::list<struct sParsedLine>&  getListOfParsedLines();
-    std::list<std::string>&         getFilenames();
+    std::list<struct sParsedLine>  getListOfParsedLines() const;
+    std::list<std::string>         getFilenames() const;
 
 private:
 	bool				_endOfInput(std::string & line);
 	std::string			_clearCommentFromLine(const std::string & line);
-    sParsedLine*		_parseLine(std::string & line);
+    sParsedLine*		_parseLine(std::string & line, const unsigned int lineNumber);
 	bool				_isInstructionWithoutValue(const std::string & line);
 	bool				_isInstructionWithValue(const std::string & line);
 
     std::list<struct sParsedLine>   _listOfParsedLines;
     std::list<std::string>          _filenames;
+
 
 };
 

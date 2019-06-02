@@ -6,9 +6,12 @@ SRC_PATH = ./src/
 INC_PATH = ./include/
 BUILD_PATH = ./build/
 
-INC = IOperand.hpp
+INC = IOperand.hpp \
+      Parser.hpp  \
+      AvmParseException.hpp
 
-SRC = main.cpp
+SRC = main.cpp \
+      AvmParseException.cpp
 
 OBJ = $(SRC:.cpp=.o)
 OBJ_SRC = $(addprefix $(BUILD_PATH), $(SRC:.cpp=.o))

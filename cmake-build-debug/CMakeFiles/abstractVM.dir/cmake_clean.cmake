@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/abstractVM.dir/src/main.cpp.o"
   "CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
+  "CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o"
   "abstractVM.pdb"
   "abstractVM"
 )

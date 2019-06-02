@@ -4,20 +4,21 @@
 #include <string>
 
 enum eOperandType {
-	T_INT8,
-	T_INT16,
-	T_INT32,
-	T_FLOAT,
-	T_DOUBLE,
+	E_INT8,
+	E_INT16,
+	E_INT32,
+	E_FLOAT,
+	E_DOUBLE,
 };
 
+
 struct	sParsedLine {
-	std::string	instruction;
-	std::string	type;
-	std::string	stringValue;
-	std::string	error;
-	bool        empty;
-	int         line_num;
+	std::string	        instruction;
+	std::string	        type;
+	std::string	        stringValue;
+	std::string         error;
+	bool                empty = false;
+	unsigned int        line_num;
 };
 
 #endif //EOPERANDTYPE_HPP

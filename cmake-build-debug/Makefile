@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /private/var/folders/mt/sngrswr156v23txhkghqmc280000gn/T/AppTranslocation/1ACB23F1-D6D0-4DD4-B2E4-946F9BE72F71/d/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /private/var/folders/mt/sngrswr156v23txhkghqmc280000gn/T/AppTranslocation/1ACB23F1-D6D0-4DD4-B2E4-946F9BE72F71/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mmotov/PhpstormProjects/avm
+CMAKE_SOURCE_DIR = /Users/maksym/projects/avm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mmotov/PhpstormProjects/avm/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/maksym/projects/avm/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/mmotov/PhpstormProjects/avm/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/private/var/folders/mt/sngrswr156v23txhkghqmc280000gn/T/AppTranslocation/1ACB23F1-D6D0-4DD4-B2E4-946F9BE72F71/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/private/var/folders/c5/3ln5_ytx2cg7vvtyk2s8nty80000gp/T/AppTranslocation/E4CC39BE-89BB-4A96-94D6-4112358F57CC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/private/var/folders/mt/sngrswr156v23txhkghqmc280000gn/T/AppTranslocation/1ACB23F1-D6D0-4DD4-B2E4-946F9BE72F71/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles /Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksym/projects/avm/cmake-build-debug/CMakeFiles /Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mmotov/PhpstormProjects/avm/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/maksym/projects/avm/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ abstractVM: cmake_check_build_system
 abstractVM/fast:
 	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/build
 .PHONY : abstractVM/fast
+
+src/AvmParseException.o: src/AvmParseException.cpp.o
+
+.PHONY : src/AvmParseException.o
+
+# target to build an object file
+src/AvmParseException.cpp.o:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o
+.PHONY : src/AvmParseException.cpp.o
+
+src/AvmParseException.i: src/AvmParseException.cpp.i
+
+.PHONY : src/AvmParseException.i
+
+# target to preprocess a source file
+src/AvmParseException.cpp.i:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.i
+.PHONY : src/AvmParseException.cpp.i
+
+src/AvmParseException.s: src/AvmParseException.cpp.s
+
+.PHONY : src/AvmParseException.s
+
+# target to generate assembly for a file
+src/AvmParseException.cpp.s:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s
+.PHONY : src/AvmParseException.cpp.s
 
 src/Parser.o: src/Parser.cpp.o
 
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... abstractVM"
+	@echo "... src/AvmParseException.o"
+	@echo "... src/AvmParseException.i"
+	@echo "... src/AvmParseException.s"
 	@echo "... src/Parser.o"
 	@echo "... src/Parser.i"
 	@echo "... src/Parser.s"
