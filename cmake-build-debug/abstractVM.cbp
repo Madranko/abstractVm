@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/maksym/projects/avm/include/AvmParseException.hpp">
+		<Unit filename="/Users/maksym/projects/avm/include/AbstractVm.hpp">
+			<Option target="abstractVM"/>
+		</Unit>
+		<Unit filename="/Users/maksym/projects/avm/include/Operand.hpp">
+			<Option target="abstractVM"/>
+		</Unit>
+		<Unit filename="/Users/maksym/projects/avm/src/AbstractVm.cpp">
 			<Option target="abstractVM"/>
 		</Unit>
 		<Unit filename="/Users/maksym/projects/avm/src/AvmParseException.cpp">

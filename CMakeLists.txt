@@ -7,4 +7,4 @@ include_directories(include)
 
 add_executable(abstractVM
         src/main.cpp
-        src/Parser.cpp src/AvmParseException.cpp)
+        src/Parser.cpp src/AvmParseException.cpp include/AbstractVm.hpp src/AbstractVm.cpp include/Operand.hpp)

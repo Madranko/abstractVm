@@ -123,6 +123,33 @@ abstractVM/fast:
 	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/build
 .PHONY : abstractVM/fast
 
+src/AbstractVm.o: src/AbstractVm.cpp.o
+
+.PHONY : src/AbstractVm.o
+
+# target to build an object file
+src/AbstractVm.cpp.o:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o
+.PHONY : src/AbstractVm.cpp.o
+
+src/AbstractVm.i: src/AbstractVm.cpp.i
+
+.PHONY : src/AbstractVm.i
+
+# target to preprocess a source file
+src/AbstractVm.cpp.i:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.i
+.PHONY : src/AbstractVm.cpp.i
+
+src/AbstractVm.s: src/AbstractVm.cpp.s
+
+.PHONY : src/AbstractVm.s
+
+# target to generate assembly for a file
+src/AbstractVm.cpp.s:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.s
+.PHONY : src/AbstractVm.cpp.s
+
 src/AvmParseException.o: src/AvmParseException.cpp.o
 
 .PHONY : src/AvmParseException.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... abstractVM"
+	@echo "... src/AbstractVm.o"
+	@echo "... src/AbstractVm.i"
+	@echo "... src/AbstractVm.s"
 	@echo "... src/AvmParseException.o"
 	@echo "... src/AvmParseException.i"
 	@echo "... src/AvmParseException.s"

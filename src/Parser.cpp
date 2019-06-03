@@ -190,7 +190,7 @@ bool   Parser::_isInstructionWithoutValue(const std::string &line){
  * @return bool
  */
 bool   Parser::_isInstructionWithValue(const std::string &line){
-    std::regex regexpr("^\\s*(push|assert)\\s*(((int8|int16|int32)\\(\\s*[-]?[0-9]+\\s*\\)\\s*)|((float|double)\\(\\s*[-]?[0-9]+(..[0-9]+)?\\s*\\)\\s*))$");
+    std::regex regexpr("^\\s*(push|assert)\\s*(((int8|int16|int32)\\(\\s*[-]?[0-9]+\\s*\\)\\s*)|((float|double)\\(\\s*[-]?[0-9]+[.]([0-9]+)+\\s*\\)\\s*))$");
     return regex_match(line, regexpr);
 }
 
