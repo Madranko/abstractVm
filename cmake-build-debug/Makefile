@@ -177,6 +177,33 @@ src/AvmParseException.cpp.s:
 	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s
 .PHONY : src/AvmParseException.cpp.s
 
+src/Factory.o: src/Factory.cpp.o
+
+.PHONY : src/Factory.o
+
+# target to build an object file
+src/Factory.cpp.o:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/Factory.cpp.o
+.PHONY : src/Factory.cpp.o
+
+src/Factory.i: src/Factory.cpp.i
+
+.PHONY : src/Factory.i
+
+# target to preprocess a source file
+src/Factory.cpp.i:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/Factory.cpp.i
+.PHONY : src/Factory.cpp.i
+
+src/Factory.s: src/Factory.cpp.s
+
+.PHONY : src/Factory.s
+
+# target to generate assembly for a file
+src/Factory.cpp.s:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/Factory.cpp.s
+.PHONY : src/Factory.cpp.s
+
 src/Parser.o: src/Parser.cpp.o
 
 .PHONY : src/Parser.o
@@ -246,6 +273,9 @@ help:
 	@echo "... src/AvmParseException.o"
 	@echo "... src/AvmParseException.i"
 	@echo "... src/AvmParseException.s"
+	@echo "... src/Factory.o"
+	@echo "... src/Factory.i"
+	@echo "... src/Factory.s"
 	@echo "... src/Parser.o"
 	@echo "... src/Parser.i"
 	@echo "... src/Parser.s"

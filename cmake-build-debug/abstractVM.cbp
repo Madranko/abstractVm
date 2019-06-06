@@ -87,6 +87,9 @@
 		<Unit filename="/Users/maksym/projects/avm/include/AbstractVm.hpp">
 			<Option target="abstractVM"/>
 		</Unit>
+		<Unit filename="/Users/maksym/projects/avm/include/Factory.hpp">
+			<Option target="abstractVM"/>
+		</Unit>
 		<Unit filename="/Users/maksym/projects/avm/include/Operand.hpp">
 			<Option target="abstractVM"/>
 		</Unit>
@@ -94,6 +97,9 @@
 			<Option target="abstractVM"/>
 		</Unit>
 		<Unit filename="/Users/maksym/projects/avm/src/AvmParseException.cpp">
+			<Option target="abstractVM"/>
+		</Unit>
+		<Unit filename="/Users/maksym/projects/avm/src/Factory.cpp">
 			<Option target="abstractVM"/>
 		</Unit>
 		<Unit filename="/Users/maksym/projects/avm/src/Parser.cpp">

@@ -8,12 +8,14 @@ BUILD_PATH = ./build/
 
 INC = IOperand.hpp \
       Parser.hpp  \
-      AvmParseException.hpp \
-      AbstractVm.hpp
+      AvmException.hpp \
+      AbstractVm.hpp \
+      Factory.hpp
 
 SRC = main.cpp \
-      AvmParseException.cpp \
-      AbstractVm.cpp
+      AvmException.cpp \
+      AbstractVm.cpp \
+      Factory.cpp
 
 OBJ = $(SRC:.cpp=.o)
 OBJ_SRC = $(addprefix $(BUILD_PATH), $(SRC:.cpp=.o))

@@ -108,8 +108,8 @@ sParsedLine *   Parser::_parseLine(std::string &line, const unsigned int lineNum
         int posCloseParenthesis = line.find(')');
         parsedLine->instruction = line.substr (0, posSpace);
         parsedLine->type = line.substr(posSpace + 1, posOpenParenthesis - posSpace - 1);
-        std::string stingValue = line.substr(posOpenParenthesis + 1, posCloseParenthesis - posOpenParenthesis - 1);
-        parsedLine->stringValue = this->replaceSpacings(stingValue);
+        std::string stringValue = line.substr(posOpenParenthesis + 1, posCloseParenthesis - posOpenParenthesis - 1);
+        parsedLine->stringValue = this->replaceSpacings(stringValue);
     } else if (!line.empty()) {
         parsedLine->error = "Parse error on line " + std::to_string(lineNumber) + "";
     } else {

@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <list>
 #include "eOperandType.hpp"
-#include "AvmParseException.hpp"
+#include "AvmException.hpp"
 
 class Parser {
 

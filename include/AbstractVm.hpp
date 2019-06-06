@@ -4,10 +4,10 @@
 #include <list>
 #include <string>
 #include <iostream>
-#include <map>
 #include "eOperandType.hpp"
 #include "IOperand.hpp"
 #include "Operand.hpp"
+#include "Factory.hpp"
 
 class AbstractVm {
 
@@ -24,12 +24,11 @@ public:
 private:
     std::list<const IOperand *> _stack;
 
-    IOperand const * _createOperand( eOperandType type, std::string const & value ) const;
-    IOperand const * _createInt8( std::string const & value ) const;
-    IOperand const * _createInt16( std::string const & value ) const;
-    IOperand const * _createInt32( std::string const & value ) const;
-    IOperand const * _createFloat( std::string const & value ) const;
-    IOperand const * _createDouble( std::string const & value ) const;
+    void    _push(std::list<struct sParsedLine>::iterator line);
+    void    _add();
+    void    _exit();
+
+
 
 
 };

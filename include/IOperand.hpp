@@ -1,6 +1,8 @@
 #ifndef IOPERAND_H
 #define IOPERAND_H
 
+#include "eOperandType.hpp"
+
 class IOperand {
 public:
 	virtual int getPrecision( void ) const = 0; // Precision of the type of the instance

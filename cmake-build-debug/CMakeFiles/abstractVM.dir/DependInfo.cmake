@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/maksym/projects/avm/src/AbstractVm.cpp" "/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o"
   "/Users/maksym/projects/avm/src/AvmParseException.cpp" "/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o"
+  "/Users/maksym/projects/avm/src/Factory.cpp" "/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/Factory.cpp.o"
   "/Users/maksym/projects/avm/src/Parser.cpp" "/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/Parser.cpp.o"
   "/Users/maksym/projects/avm/src/main.cpp" "/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles/abstractVM.dir/src/main.cpp.o"
   )

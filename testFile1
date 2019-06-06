@@ -1,6 +1,0 @@
-push int16(2)
-push int16(1)
-
-pop
-exit
-;;
