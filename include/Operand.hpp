@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
+#include <cmath>
 #include "IOperand.hpp"
 #include "Factory.hpp"
 
@@ -12,9 +13,15 @@ class Operand : public IOperand {
 
 public:
     Operand(const eOperandType type, const T value, const int precision) {
-        std::ostringstream out;
-        out << std::fixed << std::setprecision(precision) << value;
-        this->_stringValue = out.str();
+        if (type == E_INT8) {
+            this->_stringValue = std::to_string(value);
+        } else {
+            std::ostringstream out;
+            out << std::fixed << std::setprecision(precision) << value;
+            this->_stringValue = out.str();
+        }
+
+        this->_factory = new Factory;
         this->_type = type;
         this->_value = value;
         this->_precision = precision;
@@ -25,13 +32,14 @@ public:
     }
 
     ~Operand() {
-
+        delete(this->_factory);
     }
 
     Operand &operator=(const Operand &rhs) {
         this->_type = rhs.getType();
         this->_value = rhs.getValue();
         this->_precision = rhs.getPrecision();
+        this->_factory = rhs.getFactory();
         return (*this);
     }
 
@@ -51,50 +59,105 @@ public:
         return this->_stringValue;
     }
 
+    Factory *           getFactory() const {
+        return this->_factory;
+    }
+
     virtual IOperand const * operator+( IOperand const & rhs ) const {
 
         eOperandType	type;
         std::string     newValue;
-        Factory *factory = new Factory;
 
         if (rhs.getType() > this->getType()) {
             type = rhs.getType();
         } else {
             type = this->getType();
         }
-        if (type < 3) {
+        if (type < E_FLOAT) {
             newValue = std::to_string(std::stoi(this->toString()) + std::stoi(rhs.toString()));
         } else {
             newValue = std::to_string(std::stod(this->toString()) + std::stod(rhs.toString()));
         }
-        IOperand const * result = factory->createOperand(type, newValue);
-        std::cout << "AddType: " << result->getType() << std::endl;
-        std::cout << "AddValue: " << result->toString() << std::endl;
-        std::cout << "AddPrecision: " << result->getPrecision() << std::endl;
+        IOperand const * result = this->_factory->createOperand(type, newValue);
         return  result;
-//            precision = rhs.getType();
-//        else
-//            precision = this->_type;
-//        //std::cout << precision << std::endl;
-//        str = makeNum(this->getValue(), rhs.getValue(), precision, 1);
-//        return (makeType(precision, str));
-        return this;
     };
 
     virtual IOperand const * operator-( IOperand const & rhs ) const{
-        return this;
-    }
+        eOperandType	type;
+        std::string     newValue;
 
-    virtual IOperand const * operator/( IOperand const & rhs ) const{
-        return this;
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            newValue = std::to_string(std::stoi(this->toString()) - std::stoi(rhs.toString()));
+        } else {
+            newValue = std::to_string(std::stod(this->toString()) - std::stod(rhs.toString()));
+        }
+        IOperand const * result = this->_factory->createOperand(type, newValue);
+        return  result;
     }
 
     virtual IOperand const * operator*( IOperand const & rhs ) const{
-        return this;
+        eOperandType	type;
+        std::string     newValue;
+
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            newValue = std::to_string(std::stoi(this->toString()) * std::stoi(rhs.toString()));
+        } else {
+            newValue = std::to_string(std::stod(this->toString()) * std::stod(rhs.toString()));
+        }
+        IOperand const * result = this->_factory->createOperand(type, newValue);
+        return  result;
+    }
+
+    virtual IOperand const * operator/( IOperand const & rhs ) const{
+        eOperandType	type;
+        std::string     newValue;
+
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            newValue = std::to_string(std::stoi(this->toString()) / std::stoi(rhs.toString()));
+        } else {
+            newValue = std::to_string(std::stod(this->toString()) / std::stod(rhs.toString()));
+        }
+        IOperand const * result = this->_factory->createOperand(type, newValue);
+        return  result;
     }
 
     virtual IOperand const * operator%( IOperand const & rhs ) const{
-        return this;
+        eOperandType	type;
+        std::string     newValue;
+
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            newValue = std::to_string(std::stoi(this->toString()) % std::stoi(rhs.toString()));
+        } else {
+            newValue = std::to_string(fmod(std::stod(this->toString()), std::stod(rhs.toString())));
+//            newValue = std::to_string(std::stod(this->toString()) % std::stod(rhs.toString()));
+        }
+        IOperand const * result = this->_factory->createOperand(type, newValue);
+        return  result;
+    }
+
+
+    virtual bool operator==( IOperand const & rhs ) const{
+        return (this->getType() == rhs.getType() && this->toString() == rhs.toString());
     }
 
 
@@ -103,6 +166,7 @@ private:
     T               _value;
     std::string     _stringValue;
     int             _precision;
+    Factory *       _factory;
 };
 
 #endif //OPERAND_HPP

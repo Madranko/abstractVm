@@ -96,7 +96,7 @@
 		<Unit filename="/Users/maksym/projects/avm/src/AbstractVm.cpp">
 			<Option target="abstractVM"/>
 		</Unit>
-		<Unit filename="/Users/maksym/projects/avm/src/AvmParseException.cpp">
+		<Unit filename="/Users/maksym/projects/avm/src/AvmException.cpp">
 			<Option target="abstractVM"/>
 		</Unit>
 		<Unit filename="/Users/maksym/projects/avm/src/Factory.cpp">

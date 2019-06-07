@@ -83,18 +83,18 @@ CMakeFiles/abstractVM.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/abstractVM.dir/src/Parser.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksym/projects/avm/src/Parser.cpp -o CMakeFiles/abstractVM.dir/src/Parser.cpp.s
 
-CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o: CMakeFiles/abstractVM.dir/flags.make
-CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o: ../src/AvmParseException.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o -c /Users/maksym/projects/avm/src/AvmParseException.cpp
+CMakeFiles/abstractVM.dir/src/AvmException.cpp.o: CMakeFiles/abstractVM.dir/flags.make
+CMakeFiles/abstractVM.dir/src/AvmException.cpp.o: ../src/AvmException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/maksym/projects/avm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/abstractVM.dir/src/AvmException.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/abstractVM.dir/src/AvmException.cpp.o -c /Users/maksym/projects/avm/src/AvmException.cpp
 
-CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksym/projects/avm/src/AvmParseException.cpp > CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.i
+CMakeFiles/abstractVM.dir/src/AvmException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/abstractVM.dir/src/AvmException.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/maksym/projects/avm/src/AvmException.cpp > CMakeFiles/abstractVM.dir/src/AvmException.cpp.i
 
-CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksym/projects/avm/src/AvmParseException.cpp -o CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s
+CMakeFiles/abstractVM.dir/src/AvmException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/abstractVM.dir/src/AvmException.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/maksym/projects/avm/src/AvmException.cpp -o CMakeFiles/abstractVM.dir/src/AvmException.cpp.s
 
 CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o: CMakeFiles/abstractVM.dir/flags.make
 CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o: ../src/AbstractVm.cpp
@@ -126,7 +126,7 @@ CMakeFiles/abstractVM.dir/src/Factory.cpp.s: cmake_force
 abstractVM_OBJECTS = \
 "CMakeFiles/abstractVM.dir/src/main.cpp.o" \
 "CMakeFiles/abstractVM.dir/src/Parser.cpp.o" \
-"CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o" \
+"CMakeFiles/abstractVM.dir/src/AvmException.cpp.o" \
 "CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o" \
 "CMakeFiles/abstractVM.dir/src/Factory.cpp.o"
 
@@ -135,7 +135,7 @@ abstractVM_EXTERNAL_OBJECTS =
 
 abstractVM: CMakeFiles/abstractVM.dir/src/main.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/src/Parser.cpp.o
-abstractVM: CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o
+abstractVM: CMakeFiles/abstractVM.dir/src/AvmException.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/src/Factory.cpp.o
 abstractVM: CMakeFiles/abstractVM.dir/build.make

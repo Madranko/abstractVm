@@ -1,0 +1,8 @@
+push int8(64)
+print
+push int8(102)
+print
+push int16(23232)
+print
+exit
+;;

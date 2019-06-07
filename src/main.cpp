@@ -6,25 +6,41 @@
 
 int main(int argc, char **argv)
 {
-
-    //todo: 1) Segmentation fault если в файле есть пучтая строка
-    //todo: 2) Не выходит из парсера если в файле нет ;;
-
     std::list<struct sParsedLine> list;
-	Parser parser(argc, argv);
+    std::list<std::string>         filenames;
+    Parser parser(argc, argv);
     AbstractVm avm;
 
-	parser.parse();
-	if (parser.validate()) {
-	    list = parser.getListOfParsedLines();
-        for (std::list<struct sParsedLine>::iterator parsedLine = list.begin(); parsedLine != list.end(); parsedLine++) {
+    filenames = parser.getFilenames();
+    if (!filenames.empty()) {
+        for (auto const & filename : filenames) {
+            parser.readFile(filename);
+            if (parser.validate()) {
+                list = parser.getListOfParsedLines();
+                try {
+                    avm.startExecution(list);
+                } catch (std::exception &exception) {
+                    std::string error = exception.what();
+//                    error = "\033[1;31mbold" + error + "\033[0m";
+                    std::cout << "\033[1;31m" + error + "\033[0m" << std::endl;
+                }
+            }
+            parser.clearList();
+            avm.clearStack();
+        }
+    } else {
+        parser.readInput();
+        if (parser.validate()) {
+            list = parser.getListOfParsedLines();
             try {
-                avm.executeInstrunction(parsedLine);
+                avm.startExecution(list);
             } catch (std::exception &exception) {
                 std::cout << exception.what() << std::endl;
             }
+            avm.clearStack();
         }
-	}
+        parser.clearList();
+    }
 }
 
 

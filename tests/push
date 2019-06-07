@@ -3,5 +3,6 @@ push int16(111)
 push int32(333)
 push float(444.44)
 push double(555.55)
+dump
 exit
 ;;

@@ -13,7 +13,9 @@ Parser::Parser(const Parser &copy) {
     *this = copy;
 }
 
-Parser::~Parser() {}
+Parser::~Parser() {
+
+}
 
 Parser &Parser::operator=(const Parser &rhs) {
 
@@ -77,11 +79,11 @@ void    Parser::readFile(const std::string & filename) {
     if (!file.is_open()) {
         parsedLine->error = "Error opening file '" + filename + "'";
     } else {
-        while(true) {
-            std::getline(file, line);
-            if (this->_endOfInput(line)) {
-                break;
-            }
+        while(std::getline(file, line)) {
+//            std::getline(file, line);
+//            if (this->_endOfInput(line)) {
+//                break;
+//            }
             line = this->_clearCommentFromLine(line);
             parsedLine = this->_parseLine(line, lineNumber);
             this->_listOfParsedLines.push_back(*parsedLine);
@@ -127,7 +129,7 @@ bool    Parser::validate() {
     bool success = true;
     for (std::list<struct sParsedLine>::iterator parsedLine = this->_listOfParsedLines.begin(); parsedLine != this->_listOfParsedLines.end(); parsedLine++) {
         if (!parsedLine->error.empty()) {
-            std::cout << parsedLine->error << std::endl;
+            std::cout << "\033[1;31m" + parsedLine->error + "\033[0m" << std::endl;
             success = false;
         }
     }
@@ -201,4 +203,8 @@ std::list<struct sParsedLine> Parser::getListOfParsedLines() const {
 
 std::list<std::string>         Parser::getFilenames() const {
     return this->_filenames;
+}
+
+void    Parser::clearList() {
+    this->_listOfParsedLines.clear();
 }

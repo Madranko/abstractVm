@@ -23,6 +23,7 @@ public:
 	Parser &operator=(const Parser &rhs);
 
 	void        parse();
+	void        clearList();
 	void		readInput();
     void		readFile(const std::string & filename);
     bool        validate();

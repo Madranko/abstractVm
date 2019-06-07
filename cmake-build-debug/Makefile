@@ -150,32 +150,32 @@ src/AbstractVm.cpp.s:
 	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AbstractVm.cpp.s
 .PHONY : src/AbstractVm.cpp.s
 
-src/AvmParseException.o: src/AvmParseException.cpp.o
+src/AvmException.o: src/AvmException.cpp.o
 
-.PHONY : src/AvmParseException.o
+.PHONY : src/AvmException.o
 
 # target to build an object file
-src/AvmParseException.cpp.o:
-	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.o
-.PHONY : src/AvmParseException.cpp.o
+src/AvmException.cpp.o:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmException.cpp.o
+.PHONY : src/AvmException.cpp.o
 
-src/AvmParseException.i: src/AvmParseException.cpp.i
+src/AvmException.i: src/AvmException.cpp.i
 
-.PHONY : src/AvmParseException.i
+.PHONY : src/AvmException.i
 
 # target to preprocess a source file
-src/AvmParseException.cpp.i:
-	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.i
-.PHONY : src/AvmParseException.cpp.i
+src/AvmException.cpp.i:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmException.cpp.i
+.PHONY : src/AvmException.cpp.i
 
-src/AvmParseException.s: src/AvmParseException.cpp.s
+src/AvmException.s: src/AvmException.cpp.s
 
-.PHONY : src/AvmParseException.s
+.PHONY : src/AvmException.s
 
 # target to generate assembly for a file
-src/AvmParseException.cpp.s:
-	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmParseException.cpp.s
-.PHONY : src/AvmParseException.cpp.s
+src/AvmException.cpp.s:
+	$(MAKE) -f CMakeFiles/abstractVM.dir/build.make CMakeFiles/abstractVM.dir/src/AvmException.cpp.s
+.PHONY : src/AvmException.cpp.s
 
 src/Factory.o: src/Factory.cpp.o
 
@@ -270,9 +270,9 @@ help:
 	@echo "... src/AbstractVm.o"
 	@echo "... src/AbstractVm.i"
 	@echo "... src/AbstractVm.s"
-	@echo "... src/AvmParseException.o"
-	@echo "... src/AvmParseException.i"
-	@echo "... src/AvmParseException.s"
+	@echo "... src/AvmException.o"
+	@echo "... src/AvmException.i"
+	@echo "... src/AvmException.s"
 	@echo "... src/Factory.o"
 	@echo "... src/Factory.i"
 	@echo "... src/Factory.s"
