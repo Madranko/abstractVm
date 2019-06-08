@@ -24,11 +24,6 @@ Parser &Parser::operator=(const Parser &rhs) {
     return *this;
 }
 
-/**
- * If filenames not empty - calls readFile for each file.
- * Else calls readInput
- * @return void.
- */
 void    Parser::parse() {
     if (!this->_filenames.empty()) {
         for (auto const & filename : this->_filenames) {
@@ -39,10 +34,6 @@ void    Parser::parse() {
     }
 }
 
-/**
- * Read and parse user input until exit or ';;'.
- * @return void.
- */
 void   Parser::readInput() {
 
     std::string         line;
@@ -60,13 +51,6 @@ void   Parser::readInput() {
         lineNumber++;
     }
 }
-
-
-/**
- * Read and parse file until end of file.
- * @param string filename - name of file to read
- * @return void.
- */
 
 void    Parser::readFile(const std::string & filename) {
 
@@ -90,12 +74,6 @@ void    Parser::readFile(const std::string & filename) {
     file.close();
 }
 
-/**
- * Parse line on tokens.
- * @param string line - line to parse
- * @param unsigned in lineNumber - number of parsed line
- * @return void.
- */
 sParsedLine *   Parser::_parseLine(std::string &line, const unsigned int lineNumber) {
     struct sParsedLine *parsedLine = new struct sParsedLine;
     line = this->replaceSpacings(line);
@@ -118,10 +96,6 @@ sParsedLine *   Parser::_parseLine(std::string &line, const unsigned int lineNum
     return parsedLine;
 }
 
-/**
- * Check parsed lines for errors, print errors if exist.
- * @return bool true if no errors, false if at least one error.
- */
 bool    Parser::validate() {
     bool success = true;
     for (std::list<struct sParsedLine>::iterator parsedLine = this->_listOfParsedLines.begin(); parsedLine != this->_listOfParsedLines.end(); parsedLine++) {
@@ -133,11 +107,6 @@ bool    Parser::validate() {
     return success;
 }
 
-/**
- * Search for ';' symbol. Returns substring before ';'
- * @param string line to search.
- * @return string substring before ';'
- */
 std::string   Parser::_clearCommentFromLine(const std::string &line){
 
     int pos = line.find(';');
@@ -145,11 +114,6 @@ std::string   Parser::_clearCommentFromLine(const std::string &line){
     return clearLine;
 }
 
-/**
- * Check if line is ';;'.
- * @param line string to search.
- * @return bool true if regex match, false if does not
- */
 bool   Parser::_endOfInput(std::string & line) {
     std::string chars = "\t ";
     line.erase(line.find_last_not_of(chars) + 1);
@@ -158,11 +122,6 @@ bool   Parser::_endOfInput(std::string & line) {
     return regex_match(line, endRegex2);
 }
 
-/**
- * Replace all unnecessary symbols
- * @param string line to clear.
- * @return string clear line
- */
 std::string   Parser::replaceSpacings(std::string &line){
     std::string chars = "\t ";
     line.erase(line.find_last_not_of(chars) + 1);
@@ -173,21 +132,11 @@ std::string   Parser::replaceSpacings(std::string &line){
     return line;
 }
 
-/**
- * Check if instruction not requires value
- * @param string line to check.
- * @return bool
- */
 bool   Parser::_isInstructionWithoutValue(const std::string &line){
     std::regex regexpr("^\\s*(pop|dump|add|sub|mul|div|mod|min|max|avg|print|exit)\\s*$");
     return regex_match(line, regexpr);
 }
 
-/**
- * Check if instruction requires value
- * @param string line to check.
- * @return bool
- */
 bool   Parser::_isInstructionWithValue(const std::string &line){
     std::regex regexpr("^\\s*(push|assert)\\s*(((int8|int16|int32)\\(\\s*[-]?[0-9]+\\s*\\)\\s*)|((float|double)\\(\\s*[-]?[0-9]+[.]([0-9]+)+\\s*\\)\\s*))$");
     return regex_match(line, regexpr);

@@ -12,31 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f3af523-327e-4fbb-b886-5d32c5a8f3bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/avm" beforeDir="false" afterPath="$PROJECT_DIR$/avm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/AbstractVm.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/AbstractVm.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Factory.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/Factory.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/AbstractVm.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/AbstractVm.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/IOperand.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/IOperand.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Operand.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/Operand.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AbstractVm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbstractVm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/add" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/assertFalse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/div" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/mul" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/overflow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/popEmptyStack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/print" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/push" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tooSmallStack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/underflow" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/8">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -81,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="181" column="70" selection-start-line="181" selection-start-column="70" selection-end-line="181" selection-end-column="70" />
+            <state relative-caret-position="1860">
+              <caret line="124" column="57" lean-forward="true" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -202,11 +178,11 @@
         <option value="$PROJECT_DIR$/include/Operand.hpp" />
         <option value="$PROJECT_DIR$/include/IOperand.hpp" />
         <option value="$PROJECT_DIR$/tests/5" />
-        <option value="$PROJECT_DIR$/src/Parser.cpp" />
         <option value="$PROJECT_DIR$/tests/6" />
         <option value="$PROJECT_DIR$/tests/7" />
         <option value="$PROJECT_DIR$/src/AbstractVm.cpp" />
         <option value="$PROJECT_DIR$/tests/8" />
+        <option value="$PROJECT_DIR$/src/Parser.cpp" />
       </list>
     </option>
   </component>
@@ -340,12 +316,12 @@
       <workItem from="1558864499618" duration="9665000" />
       <workItem from="1558972178576" duration="3806000" />
       <workItem from="1559290280199" duration="9438000" />
-      <workItem from="1559463194752" duration="72169000" />
+      <workItem from="1559463194752" duration="72417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112854000" />
+    <option name="totallyTimeSpent" value="113102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -585,33 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/AbstractVm.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#49#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="181" column="70" selection-start-line="181" selection-start-column="70" selection-end-line="181" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/Operand.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="183" column="49" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
-          <folding>
-            <element signature="e#41#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/6">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -644,6 +593,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/Operand.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="183" column="49" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
+          <folding>
+            <element signature="e#41#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/AbstractVm.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding>
+            <element signature="e#49#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="57" lean-forward="true" selection-start-line="124" selection-start-column="57" selection-end-line="124" selection-end-column="57" />
         </state>
       </provider>
     </entry>
