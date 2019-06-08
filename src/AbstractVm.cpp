@@ -48,7 +48,10 @@ void AbstractVm::executeInstruction(std::list<struct sParsedLine>::iterator line
                 {"mul",  &AbstractVm::_mul},
                 {"div",  &AbstractVm::_div},
                 {"mod",  &AbstractVm::_mod},
-                {"print",  &AbstractVm::_print},
+                {"min",  &AbstractVm::_min},
+                {"max",  &AbstractVm::_max},
+                {"avg",  &AbstractVm::_avg},
+                {"print",&AbstractVm::_print},
                 {"exit", &AbstractVm::_exit}
         };
         instructionMethod method = instructions[line->instruction];
@@ -130,7 +133,7 @@ void    AbstractVm::_sub(std::list<struct sParsedLine>::iterator line) {
     this->_stack.pop_front();
     second = this->_stack.front();
     this->_stack.pop_front();
-    this->_stack.push_front(*first - *second);
+    this->_stack.push_front(*second - *first);
     delete(first);
     delete(second);
 }
@@ -157,13 +160,13 @@ void    AbstractVm::_div(std::list<struct sParsedLine>::iterator line) {
     first = this->_stack.front();
     this->_stack.pop_front();
     second = this->_stack.front();
-    if (second->toString() == "0") {
+    if (first->toString() == "0") {
         delete(first);
         delete(second);
         throw (AvmException::DivisionOnZeroException(line->line_num));
     }
     this->_stack.pop_front();
-    this->_stack.push_front(*first / *second);
+    this->_stack.push_front(*second / *first);
     delete(first);
     delete(second);
 }
@@ -176,15 +179,70 @@ void    AbstractVm::_mod(std::list<struct sParsedLine>::iterator line) {
     first = this->_stack.front();
     this->_stack.pop_front();
     second = this->_stack.front();
-    if (second->toString() == "0") {
+    if (first->toString() == "0") {
         delete(first);
         delete(second);
         throw (AvmException::ModuloOnZeroException(line->line_num));
     }
     this->_stack.pop_front();
-    this->_stack.push_front(*first % *second);
+    this->_stack.push_front(*second % *first);
     delete(first);
     delete(second);
+}
+
+void    AbstractVm::_min(std::list<struct sParsedLine>::iterator line) {
+
+    this->_sizeValid("min", line->line_num);
+    IOperand const * first;
+    IOperand const * second;
+    first = this->_stack.front();
+    this->_stack.pop_front();
+    second = this->_stack.front();
+    this->_stack.pop_front();
+    if (*second < *first) {
+        this->_stack.push_front(second);
+        delete(first);
+    } else {
+        this->_stack.push_front(first);
+        delete(second);
+    }
+}
+
+void    AbstractVm::_max(std::list<struct sParsedLine>::iterator line) {
+
+    this->_sizeValid("min", line->line_num);
+    IOperand const * first;
+    IOperand const * second;
+    first = this->_stack.front();
+    this->_stack.pop_front();
+    second = this->_stack.front();
+    this->_stack.pop_front();
+    if (*second > *first) {
+        this->_stack.push_front(second);
+        delete(first);
+    } else {
+        this->_stack.push_front(first);
+        delete(second);
+    }
+}
+
+void    AbstractVm::_avg(std::list<struct sParsedLine>::iterator line) {
+
+    this->_sizeValid("min", line->line_num);
+    IOperand const * first;
+    IOperand const * second;
+    IOperand const * sum;
+    IOperand const * two = this->_factory->createOperand(E_INT32, "2");
+    first = this->_stack.front();
+    this->_stack.pop_front();
+    second = this->_stack.front();
+    this->_stack.pop_front();
+    sum = *first + *second;
+    this->_stack.push_front(*sum / *two);
+    delete(first);
+    delete(second);
+    delete(sum);
+    delete(two);
 }
 
 void    AbstractVm::_print(std::list<struct sParsedLine>::iterator line) {

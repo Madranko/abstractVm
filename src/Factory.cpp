@@ -34,7 +34,7 @@ IOperand const * Factory::createOperand( eOperandType type, std::string const & 
 }
 
 IOperand const * Factory::_createInt8(std::string const & value )const {
-    long long int intVal = std::stoll(value);
+    long double intVal = std::stold(value);
     if (intVal > INT8_MAX) {
         throw AvmException::OverflowException("int8");
     } else if (intVal < INT8_MIN) {
@@ -45,7 +45,7 @@ IOperand const * Factory::_createInt8(std::string const & value )const {
 }
 
 IOperand const * Factory::_createInt16(std::string const & value )const {
-    long long int intVal = std::stoll(value);
+    long double intVal = std::stold(value);
     if (intVal > INT16_MAX) {
         throw AvmException::OverflowException("int16");
     } else if (intVal < INT16_MIN) {
@@ -56,7 +56,7 @@ IOperand const * Factory::_createInt16(std::string const & value )const {
 }
 
 IOperand const * Factory::_createInt32(std::string const & value )const {
-    long long int intVal = std::stoll(value);
+    long double intVal = std::stold(value);
     if (intVal > INT32_MAX) {
         throw AvmException::OverflowException("int32");
     } else if (intVal < INT32_MIN) {
@@ -102,12 +102,6 @@ int               Factory::_findPrecision(const std::string & value) const {
     int pos = copy.find(delimiter);
     std::string result = copy.substr(pos + 1, copy.length() - pos);
     return result.length();
-
-
-
-
-
-//    value.substr(0, value.find('.')).compare(ss.str().substr(0, ss.str().find('.'))) != 0
 }
 
 

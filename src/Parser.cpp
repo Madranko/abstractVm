@@ -78,12 +78,9 @@ void    Parser::readFile(const std::string & filename) {
     file.open (filename);
     if (!file.is_open()) {
         parsedLine->error = "Error opening file '" + filename + "'";
+        this->_listOfParsedLines.push_back(*parsedLine);
     } else {
         while(std::getline(file, line)) {
-//            std::getline(file, line);
-//            if (this->_endOfInput(line)) {
-//                break;
-//            }
             line = this->_clearCommentFromLine(line);
             parsedLine = this->_parseLine(line, lineNumber);
             this->_listOfParsedLines.push_back(*parsedLine);
@@ -182,7 +179,7 @@ std::string   Parser::replaceSpacings(std::string &line){
  * @return bool
  */
 bool   Parser::_isInstructionWithoutValue(const std::string &line){
-    std::regex regexpr("^\\s*(pop|dump|add|sub|mul|div|mod|print|exit)\\s*$");
+    std::regex regexpr("^\\s*(pop|dump|add|sub|mul|div|mod|min|max|avg|print|exit)\\s*$");
     return regex_match(line, regexpr);
 }
 

@@ -1,0 +1,5 @@
+push float(2.222)
+push float(4.444)
+avg
+dump
+exit

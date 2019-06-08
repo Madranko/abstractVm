@@ -1,3 +1,0 @@
-push    double(332.22222223)
-assert  double(332.22222223)
-assert  double(332.222222233)

@@ -21,7 +21,6 @@ int main(int argc, char **argv)
                     avm.startExecution(list);
                 } catch (std::exception &exception) {
                     std::string error = exception.what();
-//                    error = "\033[1;31mbold" + error + "\033[0m";
                     std::cout << "\033[1;31m" + error + "\033[0m" << std::endl;
                 }
             }

@@ -39,6 +39,9 @@ private:
     void    _mul(std::list<struct sParsedLine>::iterator line);
     void    _div(std::list<struct sParsedLine>::iterator line);
     void    _mod(std::list<struct sParsedLine>::iterator line);
+    void    _min(std::list<struct sParsedLine>::iterator line);
+    void    _max(std::list<struct sParsedLine>::iterator line);
+    void    _avg(std::list<struct sParsedLine>::iterator line);
     void    _print(std::list<struct sParsedLine>::iterator line);
     void    _exit(std::list<struct sParsedLine>::iterator line);
 

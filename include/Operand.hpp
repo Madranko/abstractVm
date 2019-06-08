@@ -155,6 +155,36 @@ public:
         return  result;
     }
 
+    virtual bool operator>( IOperand const & rhs ) const {
+        eOperandType	type;
+
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            return (std::stoi(this->toString()) > std::stoi(rhs.toString()));
+        } else {
+            return (std::stod(this->toString()) > std::stod(rhs.toString()));
+        }
+    }
+
+    virtual bool operator<( IOperand const & rhs ) const {
+        eOperandType	type;
+
+        if (rhs.getType() > this->getType()) {
+            type = rhs.getType();
+        } else {
+            type = this->getType();
+        }
+        if (type < E_FLOAT) {
+            return (std::stoi(this->toString()) < std::stoi(rhs.toString()));
+        } else {
+            return (std::stod(this->toString()) < std::stod(rhs.toString()));
+        }
+    }
+
 
     virtual bool operator==( IOperand const & rhs ) const{
         return (this->getType() == rhs.getType() && this->toString() == rhs.toString());

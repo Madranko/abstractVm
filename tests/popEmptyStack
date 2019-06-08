@@ -1,9 +1,0 @@
-push int32(23)
-push float(31.322)
-dump
-pop
-dump
-pop
-dump
-pop
-exit
