@@ -1,0 +1,6 @@
+push int32(0)
+push int32(32)
+
+div
+
+exit

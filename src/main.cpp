@@ -28,13 +28,21 @@ int main(int argc, char **argv)
             avm.clearStack();
         }
     } else {
-        parser.readInput();
+        try {
+            parser.readInput();    
+        } catch (AvmException::CinFailedException &exception) {
+            std::cout << exception.what() << std::endl;
+            parser.clearList();
+            return 0;    
+        }
+        
         if (parser.validate()) {
             list = parser.getListOfParsedLines();
             try {
                 avm.startExecution(list);
             } catch (std::exception &exception) {
-                std::cout << exception.what() << std::endl;
+                std::string error = exception.what();
+                std::cout << "\033[1;31m" + error + "\033[0m" << std::endl;
             }
             avm.clearStack();
         }

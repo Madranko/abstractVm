@@ -114,6 +114,18 @@ namespace AvmException {
         std::string _error;
     };
 
+    class CinFailedException : public std::exception {
+    public:
+        CinFailedException();
+        CinFailedException(const CinFailedException  &copy);
+        virtual ~CinFailedException () throw();
+        CinFailedException &operator=(const CinFailedException &rhs);
+        const char  *what(void) const throw();
+        std::string getError() const;
+    private:
+        std::string _error;
+    };
+
 
 }
 

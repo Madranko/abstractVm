@@ -42,6 +42,9 @@ void   Parser::readInput() {
 
     while(true) {
         std::getline(std::cin, line);
+        if (std::cin.fail()) {
+            throw(AvmException::CinFailedException());
+        }
         if (this->_endOfInput(line)) {
             break;
         }

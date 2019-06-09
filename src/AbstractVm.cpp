@@ -160,13 +160,13 @@ void    AbstractVm::_div(std::list<struct sParsedLine>::iterator line) {
     first = this->_stack.front();
     this->_stack.pop_front();
     second = this->_stack.front();
-    if (first->toString() == "0") {
+    if (second->toString() == "0") {
         delete(first);
         delete(second);
         throw (AvmException::DivisionOnZeroException(line->line_num));
     }
     this->_stack.pop_front();
-    this->_stack.push_front(*second / *first);
+    this->_stack.push_front(*first / *second);
     delete(first);
     delete(second);
 }
@@ -179,13 +179,13 @@ void    AbstractVm::_mod(std::list<struct sParsedLine>::iterator line) {
     first = this->_stack.front();
     this->_stack.pop_front();
     second = this->_stack.front();
-    if (first->toString() == "0") {
+    if (second->toString() == "0") {
         delete(first);
         delete(second);
         throw (AvmException::ModuloOnZeroException(line->line_num));
     }
     this->_stack.pop_front();
-    this->_stack.push_front(*second % *first);
+    this->_stack.push_front(*first % *second);
     delete(first);
     delete(second);
 }

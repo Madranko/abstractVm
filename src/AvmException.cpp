@@ -296,3 +296,36 @@ const char	*
 AvmException::NoExitCommandException::what() const throw() {
     return (this->_error.c_str());
 }
+
+/*
+ * CinFailedException
+ */
+
+AvmException::
+CinFailedException::CinFailedException()  {
+
+    this->_error = "Cin failed. Dont't do that";
+}
+
+AvmException::
+CinFailedException::CinFailedException(const AvmException::CinFailedException &copy) {
+    *this = copy;
+}
+
+AvmException::
+CinFailedException::CinFailedException::~CinFailedException() throw() {}
+
+std::string AvmException::CinFailedException::getError() const {
+    return this->_error;
+}
+
+AvmException::CinFailedException &
+AvmException::CinFailedException::operator=(AvmException::CinFailedException const & rhs){
+    this->_error = rhs.getError();
+    return (*this);
+}
+
+const char  *
+AvmException::CinFailedException::what() const throw() {
+    return (this->_error.c_str());
+}
